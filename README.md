@@ -6,4 +6,3 @@ Copyright (c) 2024 by Central South University. All rights reserved.
 
 **Contributors**
 Yaokun Yang, Senyu Zeng, Binyan Wei and Qiuying Zhao, from Department of Applied Geophysics.
-
