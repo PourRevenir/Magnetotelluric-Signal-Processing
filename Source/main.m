@@ -16,18 +16,28 @@ data=reshape(data,34,length(data)/34);
 f = data(1,:);
 ExEx = data(5,:) + 1j * data(6,:);
 ExEy = data(7,:) + 1j * data(8,:); EyEx = conj(ExEy);
+% EyEx = data(7,:) + 1j * data(8,:); ExEy = conj(EyEx);
 EyEy = data(9,:) + 1j * data(10,:);
 ExHx = data(11,:) + 1j * data(12,:); HxEx = conj(ExHx);
+% HxEx = data(11,:) + 1j * data(12,:); ExHx = conj(HxEx);
 EyHx = data(13,:) + 1j * data(14,:); HxEy = conj(EyHx);
+% HxEy = data(13,:) + 1j * data(14,:); EyHx = conj(HxEy);
 HxHx = data(15,:) + 1j * data(16,:);
 ExHy = data(17,:) + 1j * data(18,:); HyEx = conj(ExHy);
+% HyEx = data(17,:) + 1j * data(18,:); ExHy = conj(HyEx);
 EyHy = data(19,:) + 1j * data(20,:); HyEy = conj(EyHy);
+% HyEy = data(19,:) + 1j * data(20,:); EyHy = conj(HyEy);
 HyHx = data(21,:) + 1j * data(22,:); HxHy = conj(HyHx);
+% HxHy = data(21,:) + 1j * data(22,:); HyHx = conj(HxHy);
 HyHy = data(23,:) + 1j * data(24,:);
 ExHz = data(25,:) + 1j * data(26,:); HzEx = conj(ExHz);
+% HzEx = data(25,:) + 1j * data(26,:); ExHz = conj(HzEx);
 EyHz = data(27,:) + 1j * data(28,:); HzEy = conj(EyHz);
+% HzEy = data(27,:) + 1j * data(28,:); EyHz = conj(HzEy);
 HxHz = data(29,:) + 1j * data(30,:); HzHx = conj(HxHz);
+% HzHx = data(29,:) + 1j * data(30,:); HxHz = conj(HzHx);
 HyHz = data(31,:) + 1j * data(32,:); HzHy = conj(HyHz);
+% HzHy = data(31,:) + 1j * data(32,:); HyHz = conj(HzHy);
 HzHz = data(33,:) + 1j * data(34,:);
 
 % calculate
