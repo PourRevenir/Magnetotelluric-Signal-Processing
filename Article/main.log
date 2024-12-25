@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.28)  24 DEC 2024 13:36
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.28)  25 DEC 2024 08:09
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1461,59 +1461,89 @@ Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
 )) (d:/LaTeX/texlive/2023/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
 Package babel Info: Importing font and identification data for english
 (babel)             from babel-en.ini. Reported on input line 11.
+) (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2022/01/05 v1.2f Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup14
+\symboldletters=\mathgroup15
+Package bm Info: No bold for \U/msa/m/n, using \pmb.
+Package bm Info: No bold for \U/msb/m/n, using \pmb.
+Package bm Info: No bold for \LS1/stix2/b/n, using \pmb.
+) (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/algorithms/algorithm.sty
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+\@float@every@algorithm=\toks57
+\c@algorithm=\count525
+) (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+ (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count526
+\c@ALG@rem=\count527
+\c@ALG@nested=\count528
+\ALG@tlm=\skip189
+\ALG@thistlm=\skip190
+\c@ALG@Lnr=\count529
+\c@ALG@blocknr=\count530
+\c@ALG@storecount=\count531
+\c@ALG@tmpcounter=\count532
+\ALG@tmplength=\skip191
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
-LaTeX Font Info:    Trying to load font information for T1+stix2 on input line 92.
+LaTeX Font Info:    Trying to load font information for T1+stix2 on input line 99.
  (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/stix2-type1/t1stix2.fd
 File: t1stix2.fd 2018/04/02 v2.0.0-latex stix2 T1 font definitions
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 92.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 92.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 99.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 99.
  (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for LS1/stix2/m/n on input line 92.
-LaTeX Font Info:    Trying to load font information for LS1+stix2 on input line 92.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for LS1/stix2/m/n on input line 99.
+LaTeX Font Info:    Trying to load font information for LS1+stix2 on input line 99.
  (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/stix2-type1/ls1stix2.fd
 File: ls1stix2.fd 2018/04/02 v2.0.0-latex stix2 LS1 font definitions
 )
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for LS2/stix2/m/n on input line 92.
-LaTeX Font Info:    Trying to load font information for LS2+stix2 on input line 92.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for LS2/stix2/m/n on input line 99.
+LaTeX Font Info:    Trying to load font information for LS2+stix2 on input line 99.
  (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/stix2-type1/ls2stix2.fd
 File: ls2stix2.fd 2018/04/02 v2.0.0-latex stix2 LS2 font definitions
 )
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Info: Redefining \microtypecontext on input line 92.
-Package microtype Info: Applying patch `item' on input line 92.
-Package microtype Info: Applying patch `toc' on input line 92.
-Package microtype Info: Applying patch `eqnum' on input line 92.
-Package microtype Info: Applying patch `footnote' on input line 92.
-Package microtype Info: Applying patch `verbatim' on input line 92.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Info: Redefining \microtypecontext on input line 99.
+Package microtype Info: Applying patch `item' on input line 99.
+Package microtype Info: Applying patch `toc' on input line 99.
+Package microtype Info: Applying patch `eqnum' on input line 99.
+Package microtype Info: Applying patch `footnote' on input line 99.
+Package microtype Info: Applying patch `verbatim' on input line 99.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
@@ -1528,7 +1558,7 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: supertabular package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count525
+\c@lstlisting=\count533
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1564,9 +1594,9 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Command `\dddot' is already robust on input line 92.
-LaTeX Info: Command `\ddddot' is already robust on input line 92.
-Package hyperref Info: Link coloring ON on input line 92.
+LaTeX Info: Command `\dddot' is already robust on input line 99.
+LaTeX Info: Command `\ddddot' is already robust on input line 99.
+Package hyperref Info: Link coloring ON on input line 99.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/biblatex/lbx/english.lbx
@@ -1579,125 +1609,149 @@ Package biblatex Info: Automatic encoding selection.
 \openout4 = `main.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'main.bbl' not found.
-
-No file main.bbl.
-Package biblatex Info: Reference section=0 on input line 92.
-Package biblatex Info: Reference segment=0 on input line 92.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 95.
-(d:/LaTeX/texlive/2023/texmf-dist/tex/latex/psnfss/t1phv.fd
+Package biblatex Info: ... file 'main.bbl' found.
+ (./main.bbl)
+Package biblatex Info: Reference section=0 on input line 99.
+Package biblatex Info: Reference segment=0 on input line 99.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 102.
+ (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.54997pt on input line 95.
+(Font)              scaled to size 8.54997pt on input line 102.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.54997pt on input line 95.
+(Font)              scaled to size 8.54997pt on input line 102.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 7.59998pt on input line 95.
+(Font)              scaled to size 7.59998pt on input line 102.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 15.19995pt on input line 95.
-LaTeX Font Info:    Trying to load font information for LS1+stix2scr on input line 95.
- (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/stix2-type1/ls1stix2scr.fd
+(Font)              scaled to size 15.19995pt on input line 102.
+
+Underfull \hbox (badness 2221) in paragraph at lines 102--102
+[]\T1/phv/b/n/16 Geoelectric Field and Elec-tri-cal Ex-plo-ration As-sign-ment: Time Se- 
+ []
+
+LaTeX Font Info:    Trying to load font information for LS1+stix2scr on input line 102.
+(d:/LaTeX/texlive/2023/texmf-dist/tex/latex/stix2-type1/ls1stix2scr.fd
 File: ls1stix2scr.fd 2018/04/02 v2.0.0-latex stix2 script LS1 font definitions
 )
-LaTeX Font Info:    Trying to load font information for LS2+stix2ex on input line 95.
+LaTeX Font Info:    Trying to load font information for LS2+stix2ex on input line 102.
  (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/stix2-type1/ls2stix2ex.fd
 File: ls2stix2ex.fd 2018/04/02 v2.0.0-latex stix2 extentions LS2 font definitions
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 95.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 102.
  (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 95.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 102.
  (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for LS1+stix2frak on input line 95.
+LaTeX Font Info:    Trying to load font information for LS1+stix2frak on input line 102.
  (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/stix2-type1/ls1stix2frak.fd
 File: ls1stix2frak.fd 2018/04/02 v2.0.0-latex stix2 fraktur LS1 font definitions
 )
-LaTeX Font Info:    Trying to load font information for LS1+stix2bb on input line 95.
+LaTeX Font Info:    Trying to load font information for LS1+stix2bb on input line 102.
  (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/stix2-type1/ls1stix2bb.fd
 File: ls1stix2bb.fd 2018/04/02 v2.0.0-latex stix2 blackboard LS1 font definitions
 )
-LaTeX Font Info:    Trying to load font information for LS2+stix2cal on input line 95.
+LaTeX Font Info:    Trying to load font information for LS2+stix2cal on input line 102.
  (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/stix2-type1/ls2stix2cal.fd
 File: ls2stix2cal.fd 2018/04/02 v2.0.0-latex stix2 calligraphic LS2 font definitions
 )
-LaTeX Font Info:    Trying to load font information for LS1+stix2sf on input line 95.
+LaTeX Font Info:    Trying to load font information for LS1+stix2sf on input line 102.
  (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/stix2-type1/ls1stix2sf.fd
 File: ls1stix2sf.fd 2018/04/02 v2.0.0-latex stix2 sans-serif LS1 font definitions
 )
-LaTeX Font Info:    Trying to load font information for LS2+stix2tt on input line 95.
+LaTeX Font Info:    Trying to load font information for LS2+stix2tt on input line 102.
  (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/stix2-type1/ls2stix2tt.fd
 File: ls2stix2tt.fd 2018/04/02 v2.0.0-latex stix2 typewriter LS2 font definitions
 )
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 5.69998pt on input line 95.
-LaTeX Font Info:    Calculating math sizes for size <7.5> on input line 95.
+(Font)              scaled to size 5.69998pt on input line 102.
+LaTeX Font Info:    Calculating math sizes for size <7.5> on input line 102.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.07497pt on input line 95.
+(Font)              scaled to size 8.07497pt on input line 102.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <8.5> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 95.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 102.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.07497pt on input line 95.
+(Font)              scaled to size 8.07497pt on input line 102.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7.8> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 95.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 102.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 7.40997pt on input line 95.
+(Font)              scaled to size 7.40997pt on input line 102.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.40997pt on input line 95.
+(Font)              scaled to size 7.40997pt on input line 102.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 7.40997pt on input line 95.
-LaTeX Font Info:    Calculating math sizes for size <7.8> on input line 95.
+(Font)              scaled to size 7.40997pt on input line 102.
+LaTeX Font Info:    Calculating math sizes for size <7.8> on input line 102.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 101.
+(Font)              scaled to size 9.49997pt on input line 108.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 9.49997pt on input line 101.
+(Font)              scaled to size 9.49997pt on input line 108.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 4.74998pt on input line 101.
+(Font)              scaled to size 4.74998pt on input line 108.
+Package lettrine.sty Info: Targeted height = 15.846pt
+(lettrine.sty)             (for loversize=0, accent excluded),
+(lettrine.sty)             Lettrine height = 17.0125pt ({\color {rhocolor}\bfseries \fontsize {25pt}{28pt}\selectfont {G}});
+(lettrine.sty)             reported on input line 110.
 
-
-LaTeX Warning: Empty bibliography on input line 160.
+Underfull \hbox (badness 3872) in paragraph at lines 139--140
+[]\T1/stix2/m/n/9 The ac-tual mea-sured sur-face impedance is given by Equa-
+ []
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.64998pt on input line 164.
+(Font)              scaled to size 6.64998pt on input line 201.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.64998pt on input line 164.
+(Font)              scaled to size 6.64998pt on input line 201.
 [1
 
 
+]
+Underfull \hbox (badness 5622) in paragraph at lines 327--328
+[]\T1/stix2/m/n/9 The self-power spec-trum and the mu-tual power spec-trum
+ []
+
+
+Underfull \hbox (badness 6691) in paragraph at lines 327--328
+\T1/stix2/m/n/9 are com-posed into the av-er-age power spec-trum, and Equa-
+ []
+
+[2]
+Package mdframed Info: mdframed works in twoside mode on input line 415.
+
+Underfull \hbox (badness 1048) in paragraph at lines 416--417
+[]\T1/stix2/m/n/9 The source codes are avail-able for down-load-ing at the link:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 416--417
+\T1/stix2/m/n/9 https://github.com/PourRevenir/Magnetotelluric-Signal-
+ []
+
+[3
 
 ] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./main.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 65474 strings out of 476683
- 1418418 string characters out of 5804929
- 2529251 words of memory out of 5000000
- 84852 multiletter control sequences out of 15000+600000
- 682793 words of font info for 205 fonts, out of 8000000 for 9000
+ 66592 strings out of 476683
+ 1438668 string characters out of 5804929
+ 2579720 words of memory out of 5000000
+ 85952 multiletter control sequences out of 15000+600000
+ 732471 words of font info for 207 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 135i,15n,140p,1107b,3848s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 135i,12n,140p,1080b,4917s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (1 page).
+Output written on main.pdf (3 pages).

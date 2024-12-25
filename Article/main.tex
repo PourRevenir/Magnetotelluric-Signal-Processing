@@ -14,7 +14,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[9pt,a4paper,twoside]{rho-class/rho}
+
 \usepackage[english]{babel}
+\usepackage{bm}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
 % \usepackage{ctex}
 
 %% Spanish babel recomendation
@@ -23,12 +27,15 @@
 \setbool{rho-abstract}{true} % Set false to hide the abstract
 \setbool{corres-info}{true} % Set false to hide the corresponding author section
 
+\newcommand{\eu}{{\mathrm{e}}}
+\newcommand{\iu}{{\mathrm{i}}}
+
 %----------------------------------------------------------
 % TITLE
 %----------------------------------------------------------
 
 \journalname{Central South University}
-\title{Geoelectric Field and Electrical Exploration Assignment: Time Series Signal Processing in Magnetotelluric Method}
+\title{Geoelectric Field and Electrical Exploration Assignment: Time Sequences Signal Processing in Magnetotelluric Method}
 
 %----------------------------------------------------------
 % AUTHORS AND AFFILIATIONS
@@ -56,7 +63,7 @@
 
 \leadauthor{Y. Yang et al.}
 \footinfo{Advisor: Prof. Jiabin Yan}
-\smalltitle{\LaTeX\ Template}
+\smalltitle{Assignment}
 \institution{Central South University}
 \theday{December 24, 2024} %\today
 
@@ -80,7 +87,7 @@
 %----------------------------------------------------------
 
 \begin{abstract}
-    
+    This paper presents a semester assignment on geoelectric fields and electrical prospecting conducted in the autumn semester of 2024 at Central South University. Leveraging the fundamental principles of the magnetotelluric (MT) method and statistical signal processing theory, the algorithm for time sequences processing of MT signals has been proposed. For the provided MT data, the apparent resistivity curve and phase curve were computed, along with the coherence, tilting amplitude, and phase of the measured results.
 \end{abstract}
 
 %----------------------------------------------------------
@@ -100,13 +107,314 @@
 
 \section{Introduction}
 
+\rhostart{G}eoelectrical information in the earth's interior can be detected by observing regionally varying time-varying electromagnetic fields. The sources of telluric electromagnetic field are not only the universe and lightning, but also man-made industrial leakage and radio. Jiabin Yan \cite{yan2004phd} studied the theory and method of magnetotelluric signal processing, and gave a detailed mathematical method, which has been widely used so far. Sheng Yang \cite{yang2004phd} studied the noise suppression in magnetotelluric sounding and applied it to the processing of magnetotelluric sounding data in Qaidam Basin, Qinghai province.
+
+In the processing of magnetotelluric time sequences signal, it is necessary to use the least square estimation. Steven M. Key\cite{steven1993,steven1998} explains the principle and application of this method in detail in his book. Based on these work, we have basically finished the assignment. Jianxin Liu et al.\cite{liu2003} achieved Robust magnetotelluric impedance estimation based on correlation coefficient with excellent results.
+
 \section{Methodology}
 
+\subsection{Apparent resistivity and phase sounding curve of magnetotelluric method}
+
+In the magnetotelluric method\cite{yan2024lectures}, the surface impedance formula on a uniform half space is given by Equation.\eqref{z10}. 
+
+\begin{equation}
+    \label{z10}
+    Z_1(0)=\sqrt{-i\omega \mu\rho}
+\end{equation}
+
+The resistivity in a uniform half space can be obtained, given by Equation.\eqref{p}.
+
+\begin{equation}
+    \label{p}
+    \rho=\dfrac{|Z_1(0)|^2}{\omega \mu}
+\end{equation}
+
+In the case of layered media, the apparent resistivity $\rho_\alpha$ is calculated by replacing the surface impedance $Z_N(0)$ in Equation.\eqref{p} with the actual measured impedance $Z_1(0)$, which is given by Equation.\eqref{pa}.
+
+\begin{equation}
+    \label{pa}
+    \rho_\alpha=\dfrac{|Z_N(0)|^2}{\omega \mu}
+\end{equation}
+
+The actual measured surface impedance is given by Equation.\eqref{zn0}\eqref{tn0}.
+
+\begin{equation}
+    \label{zn0}
+    Z_N(0)=Z_{01}T_N(0)
+\end{equation}
+
+\begin{equation}
+    \label{tn0}
+    T_N(0)=R_N(0)=\dfrac{Z_{01}(1-\eu^{2\iu k_1h_1})+Z_N(h_1)(1+\eu^{2\iu k_1h_1})}{Z_{01}(1+\eu^{2\iu k_1h_1})+Z_N(h_1)(1-\eu^{2\iu k_1h_1})}
+\end{equation}
+
+Since the apparent resistivity is a comprehensive reflection of the electrical properties of the rock affected by the electromagnetic field at a given frequency, the apparent resistivity $\rho_\alpha$ is a function of frequency. It is able to be seen from the skin effect of electromagnetic field that the resistivity of different frequencies reflects the cross section property of the ground electric field at different depths, so the electrical distribution information at different depths can be obtained by the apparent resistivity sounding curve.
+
+Based on Equation.\eqref{zn0}\eqref{tn0}, the electric field strength can be given by Equation.\eqref{Ex0}.
+
+\begin{equation}
+    \label{Ex0}
+    E_x(0)=H_y(0)Z_{01}T_N(0)
+\end{equation}
+
+For apparent resistivity on multilayer dielectric surfaces, Equation.\eqref{pa2} can be obtained when $h_1\to \infty$, $\eu^{2\iu k_1h_1}\to 0$ in a uniform half space, among which the true resistivity can then be calculated. 
+
+\begin{equation}
+    \label{pa2}
+    \dfrac{\rho_\alpha}{\rho_1}=\dfrac{|Z_N(0)|^2}{|Z_{01}|^2}
+\end{equation}
+
+Similarly, the phase of the impedance is given by Equation.\eqref{ph}.
+
+\begin{equation}
+    \label{ph}
+    \phi =\arg Z_N(0)
+\end{equation}
+
+Given time sequences $E[t]$ and $H[t]$, do Fourier transform to transform it into a power spectrum. It can obtain the sequences $E[\omega]$ and $H[\omega]$ in the frequency domain. Then the apparent resistivity curve is calculated by Equation.\eqref{pa}, and the phase curve is calculated by Equation.\eqref{ph}.
+
+\begin{equation}
+    \label{zw}
+    \dot{\bm{E}} = \dot{\mathbf{Z}}\dot{\bm{H}}
+\end{equation}
+
+In a three-dimensional terrestrial medium, the impedance can be calculated by Equation.\eqref{zw}, where $\dot{\mathbf{Z}}$ is the impedance tensor.
+
+\begin{equation}
+    \label{ztensor}
+    \dot{\mathbf{Z}}=\begin{bmatrix}
+        {Z}_{xx}[\omega] & {Z}_{xy}[\omega] \\
+        {Z}_{yx}[\omega] & {Z}_{yy}[\omega]
+    \end{bmatrix}
+\end{equation}
+
+\begin{equation}
+    \label{ehtensor}
+    \dot{\bm{E}}=\begin{bmatrix}
+        E_{x}[\omega]\\
+        E_{y}[\omega]
+    \end{bmatrix}\quad
+    \dot{\bm{H}}=\begin{bmatrix}
+        H_{x}[\omega]\\
+        H_{y}[\omega]
+    \end{bmatrix}
+\end{equation}
+
+\subsection{Least squares estimation of statistical signal} 
+
+For the linear system given in Equation.\eqref{zw}, we can use linear least squares(LS) estimation to calculate the value of the impedance. Using linear least squares estimators for scalar parameters, we assume that the signal model is given by Equation.\eqref{sn}.
+
+\begin{equation}
+    \label{sn}
+    s[n]=\theta h[n]
+\end{equation}
+
+Where $s[n]$ is the signal model and $h[n]$ is the known sequence. At this time, the LS error is given by Equation.\eqref{err1}.
+
+\begin{equation}
+    \label{err1}
+    J(\theta) = \sum^N_{n=1} (x[n] - \theta h[n])^2
+\end{equation}
+
+It can be shown that by finding the minimum value, LSE can be obtained as follows.
+
+\begin{equation}
+    \label{lse}
+    \hat{\theta} = \dfrac{\sum^N_{n=1} x[n]h[n]}{\sum^N_{n=1} h[n]^2}
+\end{equation}
+
+This conclusion can be extended to any $p\times 1$ dimensional moderate parameter $\bm{\theta}$, when assumed that the signal model is given by Equation.\eqref{sn2}.
+
+\begin{equation}
+    \label{sn2}
+    \bm{s}=\mathbf{H}\bm{\theta}
+\end{equation}
+
+$\mathbf{H}$ is an $N\times p$ matrix ($N>p$) of full rank $p$, which is called an observation matrix. LSE is then obtained by minimizing Equation.\eqref{err2}, using $J$ as a quadratic function of $\bm{\theta}$.
+
+\begin{equation}
+    \label{err2}
+    J(\bm{\theta}) = \sum^N_{n=1} (x[n] - s[n])^2 =(\bm{x}-\mathbf{H}\bm{\theta})^T(\bm{x}-\mathbf{H}\bm{\theta})
+\end{equation}
+
+\begin{equation}
+    \label{err3}
+    \begin{aligned}
+        J(\bm{\theta}) &= \bm{x}^T\bm{x}-\bm{x}^T\mathbf{H}\bm{\theta}-\bm{\theta}^T\mathbf{H}^T\bm{x}+\bm{\theta}^T\mathbf{H}^T\mathbf{H}\bm{\theta}\\
+        &= \bm{x}^T\bm{x}-2\bm{x}^T\mathbf{H}\bm{\theta}+\bm{\theta}^T\mathbf{H}^T\mathbf{H}\bm{\theta}
+    \end{aligned}
+\end{equation}
+
+Let the gradient of $J(\bm{\theta})$ be 0
+
+\begin{equation}
+    \label{err4}
+    \dfrac{\partial J(\bm{\theta})}{\partial \bm{\theta}} = -2\mathbf{H}^T\bm{x}+2\mathbf{H}^T\mathbf{H}\bm{\theta}=0
+\end{equation}
+
+LSE can be found in Equation.\eqref{lse2}. 
+
+\begin{equation}
+    \label{lse2}
+    \hat{\bm{\theta}} = (\mathbf{H}^T\mathbf{H})^{-1}\mathbf{H}^T\bm{x}
+\end{equation}
+
+The conclusion of Equation.\eqref{lse2} is based on the scalar field. When the problem is in the complex field, the matrix transpose operation needs to be changed to conjugate transpose.
+
+Equation.\eqref{zw} contains two linear equations obtained from one observation. When observed $N$ times, $2N$ linear equations can be obtained and can be written as Equation.\eqref{zw2}.
+
+\begin{equation}
+    \label{zw2}
+    \begin{bmatrix}
+        E_{x1}[\omega] \\
+        \vdots \\
+        E_{xN}[\omega] \\
+        E_{y1}[\omega] \\
+        \vdots \\
+        E_{yN}[\omega]
+    \end{bmatrix}=\begin{bmatrix}
+        H_{x1}[\omega] & H_{y1}[\omega] & 0 & 0\\ 
+        \vdots & \vdots & \vdots & \vdots\\
+        H_{xN}[\omega] & H_{yN}[\omega] & 0 & 0\\
+         0 & 0 & H_{x1}[\omega] & H_{y1}[\omega]\\
+         \vdots & \vdots & \vdots & \vdots\\
+         0 & 0 & H_{yN}[\omega] & H_{yN}[\omega]
+    \end{bmatrix}\begin{bmatrix}
+        Z_{xx}[\omega] \\
+        Z_{xy}[\omega] \\
+        Z_{yx}[\omega] \\
+        Z_{yy}[\omega] 
+    \end{bmatrix}
+\end{equation}
+
+According to the conclusion of Equation 19, the least squares estimate of the impedance can be obtained in the complex domain by Equation.\eqref{zw3}.
+
+\begin{equation}
+    \label{zw3}
+    \hat{\bm{Z}} = (\dot{\mathbf{H}}^H \dot{\mathbf{H}})^{-1}\dot{\mathbf{H}}^H\dot{\bm{E}}
+\end{equation}
+
+Weighted least squares estimation can also be used, that is, a positive definite symmetric weighted matrix $\mathbf{W}$ of $N \times N$ dimension is inserted into Equation.\eqref{err2}, and the error index obtained is given by Equation.\eqref{err5}.
+
+\begin{equation}
+    \label{err5}
+    J(\bm{Z})=(\dot{\bm{E}}-\dot{\mathbf{H}}\bm{Z})^H\mathbf{W}(\dot{\bm{E}}-\dot{\mathbf{H}}\bm{Z})
+\end{equation}
+
+Then we get
+
+\begin{equation}
+    \label{zw4}
+    \hat{\bm{Z}}=(\dot{\mathbf{H}}^H \mathbf{W} \dot{\mathbf{H}})^{-1}\dot{\mathbf{H}}^H\mathbf{W}\dot{\bm{E}}
+\end{equation}
+
 \section{Algorithm and implementation}
+
+\subsection{Impedance estimation and tip calculation}
+
+According to the results of Equation.\eqref{zw3}, the following formula can be obtained by sorting out the real and imaginary parts respectively.
+
+\begin{equation}
+    \label{pow1}
+    \sum^N_{i=1}E_{xi}H_{xi}^\ast=Z_{xx}\sum^{N}_{i=1}H_{xi}H_{xi}^\ast+Z_{xy}\sum^N_{i=1}H_{yi}H_{xi}^\ast
+\end{equation}
+
+\begin{equation}
+    \label{pow2}
+    \sum^N_{i=1}E_{xi}H_{yi}^\ast=Z_{xx}\sum^N_{i=1}H_{xi}H_{yi}^\ast+Z_{xy}\sum^N_{i=1}H_{yi}H_{yi}^\ast
+\end{equation}
+
+The self-power spectrum and the mutual power spectrum are composed into the average power spectrum, and Equation.\eqref{apow1}\eqref{apow2}\eqref{apow3}\eqref{apow4} is obtained.
+
+\begin{equation}
+    \label{apow1}
+    \overline{E_xH_x^\ast}=Z_{xx}\overline{H_xH_x^\ast}+Z_{xy}\overline{H_yH_x^\ast} 
+\end{equation}
+
+\begin{equation}
+    \label{apow2}
+    \overline{E_xH_y^\ast}=Z_{xx}\overline{H_xH_y^\ast}+Z_{xy}\overline{H_yH_y^\ast} 
+\end{equation}
+
+\begin{equation}
+    \label{apow3}
+    \overline{E_yH_x^\ast}=Z_{xx}\overline{H_xH_x^\ast}+Z_{xy}\overline{H_yH_x^\ast} 
+\end{equation}
+
+\begin{equation}
+    \label{apow4}
+    \overline{E_yH_y^\ast}=Z_{xx}\overline{H_xH_y^\ast}+Z_{xy}\overline{H_yH_y^\ast} 
+\end{equation}
+
+Four impedance components can be solved.
+
+\begin{equation}
+    \label{zxx}
+    \hat{Z}_{xx}[\omega]=\dfrac{\overline{E_xA^\ast}\overline{H_yB^\ast}-\overline{E_xB^\ast}\overline{H_yA^\ast}}{\overline{H_xA^\ast}\overline{H_yB^\ast}-\overline{H_xB^\ast}\overline{H_yA^\ast}}
+\end{equation}
+
+\begin{equation}
+    \label{zxy}
+    \hat{Z}_{xy}[\omega]=\dfrac{\overline{E_xB^\ast}\overline{H_xA^\ast}-\overline{E_xA^\ast}\overline{H_xB^\ast}}{\overline{H_xA^\ast}\overline{H_yB^\ast}-\overline{H_xB^\ast}\overline{H_yA^\ast}}
+\end{equation}
+
+\begin{equation}
+    \label{zyx}
+    \hat{Z}_{yx}[\omega]=\dfrac{\overline{E_yA^\ast}\overline{H_yB^\ast}-\overline{E_yB^\ast}\overline{H_yA^\ast}}{\overline{H_xA^\ast}\overline{H_yB^\ast}-\overline{H_xB^\ast}\overline{H_yA^\ast}}
+\end{equation}
+
+\begin{equation}
+    \label{zyy}
+    \hat{Z}_{yy}[\omega]=\dfrac{\overline{E_yB^\ast}\overline{H_xA^\ast}-\overline{E_yA^\ast}\overline{H_xB^\ast}}{\overline{H_xA^\ast}\overline{H_yB^\ast}-\overline{H_xB^\ast}\overline{H_yA^\ast}}
+\end{equation}
+
+Where $A$, $B$ is the $C_4^2=6$ combinations from $E_x$, $E_y$, $H_x$ and $H_y$. When the combination of $A$-$B$ is $E_x-H_y$ or $E_y-H_x$, the system of linear equations is ill-conditioned and therefore not used. That means there are four ways to solve it.
+
+\begin{equation}
+    \label{tilting}
+    H_z[\omega]=A_{zx}[\omega]H_x[\omega]+B_{zy}[\omega]H_y[\omega]
+\end{equation}
+
+In the same way, the tilting subvector can be calculated from Equation.\eqref{tilting}.
+
+\begin{equation}
+    \label{azx}
+    A_{zx}[\omega]=\dfrac{\overline{H_yH_y^\ast}\overline{H_zH_x^\ast}-\overline{H_yH_x^\ast}\overline{H_zH_y^\ast}}{\overline{H_xH_x^\ast}\overline{H_yH_y^\ast}-\overline{H_xH_y^\ast}\overline{H_yH_y^\ast}}
+\end{equation}
+
+\begin{equation}
+    \label{bzy}
+    B_{zy}[\omega]=\dfrac{\overline{H_xH_x^\ast}\overline{H_zH_y^\ast}-\overline{H_xH_y^\ast}\overline{H_zH_x^\ast}}{\overline{H_xH_x^\ast}\overline{H_yH_y^\ast}-\overline{H_xH_y^\ast}\overline{H_yH_y^\ast}}
+\end{equation}
+
+\begin{algorithm}[H]
+    \caption{Algorithm for solving the least squares estimation of the impedance tensor}
+    \label{alg:z}
+    \begin{algorithmic}[1]
+        \Require Data of the electromagnetic field, including $f$, $E$ and $H$.
+        \State Step 1: read the data from the file.
+        \State Step 2: calculate the average power spectrum.
+        \State Step 3: solve the least squares estimation of the impedance tensor $\mathbf{Z}$ and tilting subvectors.
+        \State $\rho_\alpha=\dfrac{|Z[\omega]|^2}{2\pi f\times 4\pi\times 10^{-7}}$
+        \State $\phi=\arctan\dfrac{\mathfrak{R}Z[\omega]}{\mathfrak{I}Z[\omega]}$.
+        \State Step 4: calculate the apparent resistivity and phase.
+        \State Step 5: save the data and plot the figures.
+    \end{algorithmic}
+\end{algorithm}
+
+\subsection{MATLAB implementation}
+
+
 
 \section{Result}
 
 \section{Conclusions}
+
+\section{Acknowledgements}
+
+\begin{rhoenv}[frametitle=Code availability]
+    The source codes are available for downloading at the link: https://github.com/PourRevenir/Magnetotelluric-Signal-Processing, required software MATLAB R2024a.
+\end{rhoenv}
 
     % \begin{rhoenv}[frametitle=Environment with custom title]
     %     Hello! I am an example of the \textit{rhoenv} included in rhoenvs \LaTeX\ package. Here you can include relevant information or notes about your work. You can modify my title directly in the code.
