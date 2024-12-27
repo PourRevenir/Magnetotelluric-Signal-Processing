@@ -19,6 +19,8 @@
 \usepackage{bm}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
+
+\usepackage{float}
 % \usepackage{ctex}
 
 %% Spanish babel recomendation
@@ -291,7 +293,7 @@ According to the conclusion of Equation 19, the least squares estimate of the im
 
 \begin{equation}
     \label{zw3}
-    \hat{\bm{Z}} = (\dot{\mathbf{H}}^H \dot{\mathbf{H}})^{-1}\dot{\mathbf{H}}^H\dot{\bm{E}}
+    \hat{\bm{Z}} = (\dot{\mathbf{H}}^\dagger \dot{\mathbf{H}})^{-1}\dot{\mathbf{H}}^\dagger\dot{\bm{E}}
 \end{equation}
 
 Weighted least squares estimation can also be used, that is, a positive definite symmetric weighted matrix $\mathbf{W}$ of $N \times N$ dimension is inserted into Equation.\eqref{err2}, and the error index obtained is given by Equation.\eqref{err5}.
@@ -301,11 +303,11 @@ Weighted least squares estimation can also be used, that is, a positive definite
     J(\bm{Z})=(\dot{\bm{E}}-\dot{\mathbf{H}}\bm{Z})^H\mathbf{W}(\dot{\bm{E}}-\dot{\mathbf{H}}\bm{Z})
 \end{equation}
 
-Then we get
+Then the Robust estimate can be obtained in Equation.\eqref{zw4}.
 
 \begin{equation}
     \label{zw4}
-    \hat{\bm{Z}}=(\dot{\mathbf{H}}^H \mathbf{W} \dot{\mathbf{H}})^{-1}\dot{\mathbf{H}}^H\mathbf{W}\dot{\bm{E}}
+    \hat{\bm{Z}}=(\dot{\mathbf{H}}^\dagger \mathbf{W} \dot{\mathbf{H}})^{-1}\dot{\mathbf{H}}^\dagger\mathbf{W}\dot{\bm{E}}
 \end{equation}
 
 \section{Algorithm and implementation}
@@ -404,13 +406,93 @@ In the same way, the tipper subvector can be calculated from Equation.\eqref{tip
 
 \subsection{MATLAB implementation}
 
-Based on the existing algorithm, we designed and wrote the MATLAB calculation program, the specific code is as follows. The action of the first function is measured by the instrument. The electric and magnetic field strengths are read in the.AVG data.
+Based on the existing algorithm, we designed and wrote the MATLAB calculation program, the specific code is as follows. The action of the first function is measured by the instrument MTACQ 2.00. Then there is the numerical program.
 
 \nolinenumbers
-\lstinputlisting[caption=Read the .AVG format data file measured by the instrument., label={lst:listing-Mat}, language=Matlab]{Code/ReadAvgData.m}
+\lstinputlisting[caption={Calculate apparent resistivity, phase,  coherence, and tipper}., label={lst:listing-Mat}, language=Matlab]{code/Magnetotelluric.m}
 \linenumbers
 
 \section{Result}
+
+We first calculated the frequency-apparent resistivity curve and frequency-phase curve using the Dunhuang 1995 40-13 data, as shown in Figure.\ref{fig:r40-13}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\columnwidth]{figures/r40-13.eps}
+    \caption{The frequency-apparent resistivity curve  using the Dunhuang 1995 40-13 data.}
+    \label{fig:r40-13}
+\end{figure}
+
+It can be seen from the figure that the apparent resistivity 1 and 2 are not equal, which may be caused by the anisotropy of the underground medium. The apparent resistivity reflects limited information, so it is also necessary to supplement it with a phase curve, as shown in Figure.\ref{fig:ph40-13}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\columnwidth]{figures/ph40-13.eps}
+    \caption{The frequency-phase curve using the Dunhuang 1995 40-13 data.}
+    \label{fig:ph40-13}
+\end{figure}
+
+The calculation formula of the coherence of the full information vector is given by Equation.\eqref{cp}, and the impedance can be calculated in four ways, which can analyze the size of the noise in the data and the quality of the measured data. The image plotted by the measured data is shown in Figure.\ref{fig:cp40-13}.
+
+\begin{equation}
+    \label{cp}
+    \mathrm{CP}_{uv} = 1-\dfrac{\sum^4_{k=1}|\overline{Z_{uv}}-Z_{uv}^k|}{4\overline{|Z_{uv}|}}
+\end{equation}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\columnwidth]{figures/cp40-13.eps}
+    \caption{The coherence curve using the Dunhuang 1995 40-13 data.}
+    \label{fig:cp40-13}
+\end{figure}
+
+It can be seen that the quality of the measured data is not good, and the deviation between the coherence degree and 1 is large. And we calculated the amplitude and phase of the tipper, as shown in Figure.\ref{fig:tp40-13}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\columnwidth]{figures/tp40-13.eps}
+    \caption{The amplitude and phase of the tipper using the Dunhuang 1995 40-13 data.}
+    \label{fig:tp40-13}
+\end{figure}
+
+We calculated 13 measuring points of line 40 and plotted the frequency-apparent resistivity curve, as shown in Figure.\ref{fig:Line40}.
+
+\begin{figure*}[pb]
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/Line40.eps}
+    \caption{The frequency-apparent resistivity curve of line 40.}
+    \label{fig:Line40}
+\end{figure*}
+
+Then we use Bostick inversion algorithm for one-dimensional apparent resistivity sounding. This method is characterized by simple calculation but poor accuracy, which can be used as a basis for further calculation in the later period. Its formula is given by Equation.\eqref{Bostick1}.
+
+\begin{equation}
+    \label{Bostick1}
+    h = \sqrt{\dfrac{\rho_\alpha}{2\pi f \mu}}
+\end{equation}
+\begin{equation}
+    \label{Bostick2}
+    \rho = \rho_\alpha\left(\dfrac{90^\circ}{\phi_\alpha}-1\right)
+\end{equation}
+
+The calculation results are shown in Figure.\ref{fig:bostick1} and Figure.\ref{fig:bostick2}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\columnwidth]{figures/Bostick1drxy.eps}
+    \caption{The resistivity $\rho_{xy}$ curve of line 40 using 1d-Bostick inversion algorithm.}
+    \label{fig:bostick1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\columnwidth]{figures/Bostick1dryx.eps}
+    \caption{The resistivity $\rho_{yx}$ curve of line 40 using 1d-Bostick inversion algorithm.}
+    \label{fig:bostick2}
+\end{figure}
+
+The above calculation results are based on the available power spectrum data. At the same time, magnetotelluric sounding based on the time series of electric and magnetic field intensity is also calculated, and the 1-d bostick apparent resistivity inversion is performed.
+
 
 \section{Conclusions}
 

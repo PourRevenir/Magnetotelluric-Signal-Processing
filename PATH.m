@@ -6,5 +6,5 @@ addpath("Source\")
 addpath("Test\")
 addpath("Figure\")
 addpath("Data\")
-
+addpath("Color\")
 end
