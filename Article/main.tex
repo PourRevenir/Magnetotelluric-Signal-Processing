@@ -87,7 +87,7 @@
 %----------------------------------------------------------
 
 \begin{abstract}
-    This paper presents a semester assignment on geoelectric fields and electrical prospecting conducted in the autumn semester of 2024 at Central South University. Leveraging the fundamental principles of the magnetotelluric (MT) method and statistical signal processing theory, the algorithm for time sequences processing of MT signals has been proposed. For the provided MT data, the apparent resistivity curve and phase curve were computed, along with the coherence, tilting amplitude, and phase of the measured results.
+    This paper presents a semester assignment on geoelectric fields and electrical prospecting conducted in the autumn semester of 2024 at Central South University. Leveraging the fundamental principles of the magnetotelluric (MT) method and statistical signal processing theory, the algorithm for time sequences processing of MT signals has been proposed. For the provided MT data, the apparent resistivity curve and phase curve were computed, along with the coherence, tipper amplitude, and phase of the measured results.
 \end{abstract}
 
 %----------------------------------------------------------
@@ -371,11 +371,11 @@ Four impedance components can be solved.
 Where $A$, $B$ is the $C_4^2=6$ combinations from $E_x$, $E_y$, $H_x$ and $H_y$. When the combination of $A$-$B$ is $E_x-H_y$ or $E_y-H_x$, the system of linear equations is ill-conditioned and therefore not used. That means there are four ways to solve it.
 
 \begin{equation}
-    \label{tilting}
+    \label{tipper}
     H_z[\omega]=A_{zx}[\omega]H_x[\omega]+B_{zy}[\omega]H_y[\omega]
 \end{equation}
 
-In the same way, the tilting subvector can be calculated from Equation.\eqref{tilting}.
+In the same way, the tipper subvector can be calculated from Equation.\eqref{tipper}.
 
 \begin{equation}
     \label{azx}
@@ -394,7 +394,7 @@ In the same way, the tilting subvector can be calculated from Equation.\eqref{ti
         \Require Data of the electromagnetic field, including $f$, $E$ and $H$.
         \State Step 1: read the data from the file.
         \State Step 2: calculate the average power spectrum.
-        \State Step 3: solve the least squares estimation of the impedance tensor $\mathbf{Z}$ and tilting subvectors.
+        \State Step 3: solve the least squares estimation of the impedance tensor $\mathbf{Z}$ and tipper subvectors.
         \State $\rho_\alpha=\dfrac{|Z[\omega]|^2}{2\pi f\times 4\pi\times 10^{-7}}$
         \State $\phi=\arctan\dfrac{\mathfrak{R}Z[\omega]}{\mathfrak{I}Z[\omega]}$.
         \State Step 4: calculate the apparent resistivity and phase.
@@ -404,7 +404,11 @@ In the same way, the tilting subvector can be calculated from Equation.\eqref{ti
 
 \subsection{MATLAB implementation}
 
+Based on the existing algorithm, we designed and wrote the MATLAB calculation program, the specific code is as follows. The action of the first function is measured by the instrument. The electric and magnetic field strengths are read in the.AVG data.
 
+\nolinenumbers
+\lstinputlisting[caption=Read the .AVG format data file measured by the instrument., label={lst:listing-Mat}, language=Matlab]{Code/ReadAvgData.m}
+\linenumbers
 
 \section{Result}
 
