@@ -78,9 +78,9 @@
 \doi{\url{https://www.doi.org/fakedoi/585858558}}
 
 \received{December 24, 2024}
-\revised{December 24, 2024}
-\accepted{December 25, 2024}
-\published{December 26, 2024}
+\revised{December 26, 2024}
+\accepted{January 1, 2024}
+\published{January 1, 2024}
 
 \license{Adhere to the MIT license.}
 
@@ -416,7 +416,7 @@ Based on the existing algorithm, we designed and wrote the MATLAB calculation pr
 
 We first calculated the frequency-apparent resistivity curve and frequency-phase curve using the Dunhuang 1995 40-13 data, as shown in Figure.\ref{fig:r40-13}.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.95\columnwidth]{figures/r40-13.eps}
     \caption{The frequency-apparent resistivity curve  using the Dunhuang 1995 40-13 data.}
@@ -425,7 +425,7 @@ We first calculated the frequency-apparent resistivity curve and frequency-phase
 
 It can be seen from the figure that the apparent resistivity 1 and 2 are not equal, which may be caused by the anisotropy of the underground medium. The apparent resistivity reflects limited information, so it is also necessary to supplement it with a phase curve, as shown in Figure.\ref{fig:ph40-13}
 
-\begin{figure}[H]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.95\columnwidth]{figures/ph40-13.eps}
     \caption{The frequency-phase curve using the Dunhuang 1995 40-13 data.}
@@ -439,7 +439,7 @@ The calculation formula of the coherence of the full information vector is given
     \mathrm{CP}_{uv} = 1-\dfrac{\sum^4_{k=1}|\overline{Z_{uv}}-Z_{uv}^k|}{4\overline{|Z_{uv}|}}
 \end{equation}
 
-\begin{figure}[H]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.95\columnwidth]{figures/cp40-13.eps}
     \caption{The coherence curve using the Dunhuang 1995 40-13 data.}
@@ -448,7 +448,7 @@ The calculation formula of the coherence of the full information vector is given
 
 It can be seen that the quality of the measured data is not good, and the deviation between the coherence degree and 1 is large. And we calculated the amplitude and phase of the tipper, as shown in Figure.\ref{fig:tp40-13}.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.95\columnwidth]{figures/tp40-13.eps}
     \caption{The amplitude and phase of the tipper using the Dunhuang 1995 40-13 data.}
@@ -457,7 +457,7 @@ It can be seen that the quality of the measured data is not good, and the deviat
 
 We calculated 13 measuring points of line 40 and plotted the frequency-apparent resistivity curve, as shown in Figure.\ref{fig:Line40}.
 
-\begin{figure*}[pb]
+\begin{figure*}[htpb]
     \centering
     \includegraphics[width=0.95\textwidth]{figures/Line40.eps}
     \caption{The frequency-apparent resistivity curve of line 40.}
@@ -493,10 +493,56 @@ The calculation results are shown in Figure.\ref{fig:bostick1} and Figure.\ref{f
 
 The above calculation results are based on the available power spectrum data. At the same time, magnetotelluric sounding based on the time series of electric and magnetic field intensity is also calculated, and the 1-d bostick apparent resistivity inversion is performed.
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\columnwidth]{figures/et.eps}
+    \caption{Electric field strength time series of 0 to 1 second, sampling frequency 4096Hz.}
+    \label{fig:et}
+\end{figure}
+
+As a supplement to our assignment, we also used additional data \texttt{YJBey.dat} and \texttt{YJBhx.dat}. This set of data gives the electric field strength and magnetic field strength of the time series. The sampling frequency of each channel is 4096Hz and the sampling time is 2 seconds. In order to use linear least squares estimation calculation, we take 0.5s as the time interval to obtain 4 sets of electric field strength and magnetic field strength data. By fast Fourier transform of the time series, four power spectra are obtained, as shown in the Figure.\ref{fig:ef}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\columnwidth]{figures/ef.eps}
+    \caption{Amplitude spectrum of electric field intensity}
+    \label{fig:ef}
+\end{figure}
+
+The calculated apparent resistivity curve and phase curve are shown in the Figure.\ref{fig:yjb-ra} and Figure.\ref{fig:yjb-ph}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\columnwidth]{figures/YJBra.eps}
+    \caption{The apparent resistivity curve.}
+    \label{fig:yjb-ra}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\columnwidth]{figures/YJBph.eps}
+    \caption{The phase curve.}
+    \label{fig:yjb-ph}
+\end{figure}
+
+Again, a one-dimensional bostick inversion is performed on this result to obtain the underground resistivity, as shown in the Figure.\ref{fig:yjb-r}.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.95\columnwidth]{figures/YJBbostick.eps}
+    \caption{One-dimensional bostick inversion result curve.}
+    \label{fig:yjb-r}
+\end{figure}
 
 \section{Conclusions}
 
+In this semester's assignment, we derived the linear least squares estimation formula for impedance in the magnetotelluric method. Using this formula, we calculated the apparent resistivity curve and phase curve for the 1995 Dunhuang Line 40 data, as well as the coherence and tipper vector. Based on the coherence analysis, it was found that the data quality was suboptimal, leading to significant deviations in the results obtained from one-dimensional Bostick inversion. Additionally, we processed magnetotelluric sounding data from supplementary operations, performing one-dimensional Bostick inversion which yielded satisfactory results.
+
+Through this semester's project, team members gained a deeper understanding of the fundamental theory and practical applications of the magnetotelluric method. We also acquired skills in impedance estimation and necessary programming techniques. Furthermore, our comprehension of forward and inverse modeling in electrical exploration has been significantly enhanced.
+
 \section{Acknowledgements}
+
+Professor Jiabin Yan gave guidance for this assignment. Researcher Xiaozhong Tong provided rich and valuable suggestions for group. Professors Haifei Liu and Rujun Chen also provided advice to the group.
 
 \begin{rhoenv}[frametitle=Code availability]
     The source codes are available for downloading at the link: https://github.com/PourRevenir/Magnetotelluric-Signal-Processing, required software MATLAB R2024a.
@@ -507,7 +553,7 @@ The above calculation results are based on the available power spectrum data. At
     % \end{rhoenv}
     
         
-    % \begin{figure}[H]
+    % \begin{figure}[htbp]
     %     \centering
     %     \includegraphics[width=0.71\columnwidth]{Example.pdf}
     %     \caption{Example figure obtained from PGFPlots \cite{PFGPlots}.}

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.28)  28 DEC 2024 02:47
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.28)  1 JAN 2025 16:21
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1754,20 +1754,33 @@ File: figures/Bostick1drxy.eps Graphic file (type eps)
 File: figures/Bostick1dryx.eps Graphic file (type eps)
 <figures/Bostick1dryx.eps>
  [4]
-Package mdframed Info: mdframed works in twoside mode on input line 501.
+File: figures/et.eps Graphic file (type eps)
+<figures/et.eps>
+File: figures/ef.eps Graphic file (type eps)
+<figures/ef.eps>
+File: figures/YJBra.eps Graphic file (type eps)
+<figures/YJBra.eps>
+File: figures/YJBph.eps Graphic file (type eps)
+<figures/YJBph.eps>
+File: figures/YJBbostick.eps Graphic file (type eps)
+<figures/YJBbostick.eps>
+ [5]
+Package mdframed Info: mdframed works in twoside mode on input line 547.
 
-Underfull \hbox (badness 1048) in paragraph at lines 502--503
+Underfull \hbox (badness 1048) in paragraph at lines 548--549
 []\T1/stix2/m/n/9 The source codes are avail-able for down-load-ing at the link:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 502--503
+Underfull \hbox (badness 10000) in paragraph at lines 548--549
 \T1/stix2/m/n/9 https://github.com/PourRevenir/Magnetotelluric-Signal-
  []
 
-[5
 
-] 
+Package lineno Warning: Linenumber reference failed, 
+(lineno)                rerun to get it right.
+
+[6] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./main.aux)
 
@@ -1778,12 +1791,12 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 67407 strings out of 476683
- 1448684 string characters out of 5804929
- 3135361 words of memory out of 5000000
- 86747 multiletter control sequences out of 15000+600000
+ 67444 strings out of 476683
+ 1449329 string characters out of 5804929
+ 3136644 words of memory out of 5000000
+ 86779 multiletter control sequences out of 15000+600000
  754407 words of font info for 226 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  135i,12n,140p,1080b,4917s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on main.pdf (5 pages).
+Output written on main.pdf (6 pages).
