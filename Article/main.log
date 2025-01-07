@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.28)  7 JAN 2025 20:14
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.9.28)  7 JAN 2025 20:15
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1499,8 +1499,7 @@ Package csquotes Info: Redefining alias 'default' -> 'english'.
 LaTeX Font Info:    Trying to load font information for T1+stix2 on input line 101.
  (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/stix2-type1/t1stix2.fd
 File: t1stix2.fd 2018/04/02 v2.0.0-latex stix2 T1 font definitions
-)
-No file main.aux.
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 101.
@@ -1513,7 +1512,7 @@ LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 101.
 LaTeX Font Info:    ... okay on input line 101.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 101.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 101.
-(d:/LaTeX/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
+ (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 101.
@@ -1598,9 +1597,6 @@ Package caption Info: End \AtBeginDocument code.
 LaTeX Info: Command `\dddot' is already robust on input line 101.
 LaTeX Info: Command `\ddddot' is already robust on input line 101.
 Package hyperref Info: Link coloring ON on input line 101.
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
-
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/biblatex/lbx/english.lbx
@@ -1700,11 +1696,6 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 9.49997pt on input line 110.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 9.49997pt on input line 110.
-
-
-Package lineno Warning: Linenumber reference failed, 
-(lineno)                rerun to get it right.
-
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 4.74998pt on input line 110.
 Package lettrine.sty Info: Targeted height = 15.846pt
@@ -1712,118 +1703,18 @@ Package lettrine.sty Info: Targeted height = 15.846pt
 (lettrine.sty)             Lettrine height = 17.0125pt ({\color {rhocolor}\bfseries \fontsize {25pt}{28pt}\selectfont {G}});
 (lettrine.sty)             reported on input line 112.
 
-LaTeX Warning: Reference `z10' on page 1 undefined on input line 120.
-
-
-LaTeX Warning: Reference `p' on page 1 undefined on input line 127.
-
-
-LaTeX Warning: Reference `p' on page 1 undefined on input line 134.
-
-
-LaTeX Warning: Reference `pa' on page 1 undefined on input line 134.
-
-
-LaTeX Warning: Reference `zn0' on page 1 undefined on input line 141.
-
-
-LaTeX Warning: Reference `tn0' on page 1 undefined on input line 141.
-
-
 Underfull \hbox (badness 3872) in paragraph at lines 141--142
 []\T1/stix2/m/n/9 The ac-tual mea-sured sur-face impedance is given by Equa-
  []
-
-
-LaTeX Warning: Reference `zn0' on page 1 undefined on input line 155.
-
-
-LaTeX Warning: Reference `tn0' on page 1 undefined on input line 155.
-
-
-LaTeX Warning: Reference `Ex0' on page 1 undefined on input line 155.
-
-
-LaTeX Warning: Reference `pa2' on page 1 undefined on input line 162.
-
-
-LaTeX Warning: Reference `ph' on page 1 undefined on input line 169.
-
-
-LaTeX Warning: Reference `pa' on page 1 undefined on input line 176.
-
-
-LaTeX Warning: Reference `ph' on page 1 undefined on input line 176.
-
-
-LaTeX Warning: Reference `zw' on page 1 undefined on input line 183.
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 6.64998pt on input line 203.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 6.64998pt on input line 203.
-
-LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 203.
-
 [1
 
 
 ]
-
-LaTeX Warning: Reference `zw' on page 2 undefined on input line 207.
-
-
-LaTeX Warning: Reference `sn' on page 2 undefined on input line 207.
-
-
-LaTeX Warning: Reference `err1' on page 2 undefined on input line 214.
-
-
-LaTeX Warning: Reference `sn2' on page 2 undefined on input line 228.
-
-
-LaTeX Warning: Reference `err2' on page 2 undefined on input line 235.
-
-
-LaTeX Warning: Reference `lse2' on page 2 undefined on input line 257.
-
-
-LaTeX Warning: Reference `lse2' on page 2 undefined on input line 264.
-
-
-LaTeX Warning: Reference `zw' on page 2 undefined on input line 266.
-
-
-LaTeX Warning: Reference `zw2' on page 2 undefined on input line 266.
-
-
-LaTeX Warning: Reference `zw3' on page 2 undefined on input line 292.
-
-
-LaTeX Warning: Reference `err2' on page 2 undefined on input line 299.
-
-
-LaTeX Warning: Reference `err5' on page 2 undefined on input line 299.
-
-
-LaTeX Warning: Reference `zw4' on page 2 undefined on input line 306.
-
-
-LaTeX Warning: Reference `zw3' on page 2 undefined on input line 317.
-
-
-LaTeX Warning: Reference `apow1' on page 2 undefined on input line 329.
-
-
-LaTeX Warning: Reference `apow2' on page 2 undefined on input line 329.
-
-
-LaTeX Warning: Reference `apow3' on page 2 undefined on input line 329.
-
-
-LaTeX Warning: Reference `apow4' on page 2 undefined on input line 329.
-
-
 Underfull \hbox (badness 5622) in paragraph at lines 329--330
 []\T1/stix2/m/n/9 The self-power spec-trum and the mu-tual power spec-trum
  []
@@ -1832,12 +1723,6 @@ Underfull \hbox (badness 5622) in paragraph at lines 329--330
 Underfull \hbox (badness 6691) in paragraph at lines 329--330
 \T1/stix2/m/n/9 are com-posed into the av-er-age power spec-trum, and Equa-
  []
-
-
-LaTeX Warning: Reference `tipper' on page 2 undefined on input line 380.
-
-
-LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 406.
 
 [2]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 412.
@@ -1849,93 +1734,37 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  (./code/Magnetotelluric.m)
-
-LaTeX Warning: Reference `fig:r40-13' on page 3 undefined on input line 417.
-
-
 Underfull \hbox (badness 1189) in paragraph at lines 417--418
 \T1/stix2/m/n/9 We first cal-cu-lated the frequency-apparent re-sis-tiv-ity curve and
  []
 
 File: figures/r40-13.eps Graphic file (type eps)
 <figures/r40-13.eps>
-
-LaTeX Warning: Reference `fig:ph40-13' on page 3 undefined on input line 426.
-
 File: figures/ph40-13.eps Graphic file (type eps)
 <figures/ph40-13.eps>
-
-LaTeX Warning: Reference `cp' on page 3 undefined on input line 435.
-
-
-LaTeX Warning: Reference `fig:cp40-13' on page 3 undefined on input line 435.
-
-
-LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 436.
-
 [3]
 File: figures/cp40-13.eps Graphic file (type eps)
 <figures/cp40-13.eps>
-
-
-LaTeX Warning: Reference `fig:tp40-13' on page 4 undefined on input line 449.
-
 File: figures/tp40-13.eps Graphic file (type eps)
 <figures/tp40-13.eps>
-
-LaTeX Warning: Reference `fig:Line40' on page 4 undefined on input line 458.
-
 File: figures/Line40.eps Graphic file (type eps)
 <figures/Line40.eps>
-
-LaTeX Warning: Reference `Bostick1' on page 4 undefined on input line 467.
-
-
-LaTeX Warning: Reference `fig:bostick1' on page 4 undefined on input line 478.
-
-
-LaTeX Warning: Reference `fig:bostick2' on page 4 undefined on input line 478.
-
 File: figures/Bostick1drxy.eps Graphic file (type eps)
 <figures/Bostick1drxy.eps>
 File: figures/Bostick1dryx.eps Graphic file (type eps)
 <figures/Bostick1dryx.eps>
-
-LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 495.
-
-[4]
+ [4]
 File: figures/et.eps Graphic file (type eps)
 <figures/et.eps>
-
-
-LaTeX Warning: Reference `fig:ef' on page 5 undefined on input line 503.
-
 File: figures/ef.eps Graphic file (type eps)
 <figures/ef.eps>
-
-LaTeX Warning: Reference `fig:yjb-ra' on page 5 undefined on input line 512.
-
-
-LaTeX Warning: Reference `fig:yjb-ph' on page 5 undefined on input line 512.
-
 File: figures/YJBra.eps Graphic file (type eps)
 <figures/YJBra.eps>
 File: figures/YJBph.eps Graphic file (type eps)
 <figures/YJBph.eps>
-
-LaTeX Warning: Reference `fig:yjb-r' on page 5 undefined on input line 528.
-
-
-Underfull \hbox (badness 1755) in paragraph at lines 528--529
-[]\T1/stix2/m/n/9 Again, a one-dimensional bo-stick in-ver-sion is per-formed on
- []
-
 File: figures/YJBbostick.eps Graphic file (type eps)
 <figures/YJBbostick.eps>
-
-LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 540.
-
-[5]
+ [5]
 Package mdframed Info: mdframed works in twoside mode on input line 547.
 
 Underfull \hbox (badness 1048) in paragraph at lines 548--549
@@ -1947,39 +1776,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 548--549
 \T1/stix2/m/n/9 https://github.com/PourRevenir/Magnetotelluric-Signal-
  []
 
-
-LaTeX Warning: Reference `mdf@pagelabel-1' on page 6 undefined on input line 549.
-
-
-LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 604.
-
 [6] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (./main.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package lastpage Warning: Rerun to get the references right on input line 604.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 67426 strings out of 476683
- 1449220 string characters out of 5804929
- 3130009 words of memory out of 5000000
- 86763 multiletter control sequences out of 15000+600000
- 761516 words of font info for 227 fonts, out of 8000000 for 9000
+ 67444 strings out of 476683
+ 1449329 string characters out of 5804929
+ 3136618 words of memory out of 5000000
+ 86779 multiletter control sequences out of 15000+600000
+ 754407 words of font info for 226 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  135i,12n,140p,1080b,4917s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
