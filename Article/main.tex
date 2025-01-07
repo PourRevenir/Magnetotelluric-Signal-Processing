@@ -44,8 +44,8 @@
 %----------------------------------------------------------
 
 \author[1]{Yaokun Yang}
-\author[1]{Senyu Zeng}
 \author[1]{Binyan Wei}
+\author[1]{Senyu Zeng}
 \author[1]{Qiuying Zhao}
 \author[1]{Haoyu Zhang}
 
@@ -293,7 +293,7 @@ According to the conclusion of Equation 19, the least squares estimate of the im
 
 \begin{equation}
     \label{zw3}
-    \hat{\bm{Z}} = (\dot{\mathbf{H}}^\dagger \dot{\mathbf{H}})^{-1}\dot{\mathbf{H}}^\dagger\dot{\bm{E}}
+    \hat{\bm{Z}} = (\dot{\mathbf{H}}^H \dot{\mathbf{H}})^{-1}\dot{\mathbf{H}}^H\dot{\bm{E}}
 \end{equation}
 
 Weighted least squares estimation can also be used, that is, a positive definite symmetric weighted matrix $\mathbf{W}$ of $N \times N$ dimension is inserted into Equation.\eqref{err2}, and the error index obtained is given by Equation.\eqref{err5}.
@@ -307,7 +307,7 @@ Then the Robust estimate can be obtained in Equation.\eqref{zw4}.
 
 \begin{equation}
     \label{zw4}
-    \hat{\bm{Z}}=(\dot{\mathbf{H}}^\dagger \mathbf{W} \dot{\mathbf{H}})^{-1}\dot{\mathbf{H}}^\dagger\mathbf{W}\dot{\bm{E}}
+    \hat{\bm{Z}}=(\dot{\mathbf{H}}^H \mathbf{W} \dot{\mathbf{H}})^{-1}\dot{\mathbf{H}}^H\mathbf{W}\dot{\bm{E}}
 \end{equation}
 
 \section{Algorithm and implementation}
