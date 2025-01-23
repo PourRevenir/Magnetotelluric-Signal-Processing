@@ -4,9 +4,9 @@ function PlotTipper(f,Azx,Byz,file)
     %
 
     subplot(2,1,1)
-    semilogx(f,abs(Azx),'LineWidth',1.3)
+    semilogx(f,abs(Azx),'-o','LineWidth',1.3)
     hold on
-    semilogx(f,abs(Byz),'LineWidth',1.3)
+    semilogx(f,abs(Byz),'-o','LineWidth',1.3)
     grid on
     ax = gca;
     ax.YLabel.String = 'Tipper amplitude';
@@ -19,9 +19,9 @@ function PlotTipper(f,Azx,Byz,file)
     legend('A_{zx}','B_{yz}');
 
     subplot(2,1,2)
-    semilogx(f,180*angle(Azx)/pi,'LineWidth',1.3)
+    semilogx(f,180*angle(Azx)/pi,'-o','LineWidth',1.3)
     hold on
-    semilogx(f,180*angle(Byz)/pi,'LineWidth',1.3)
+    semilogx(f,180*angle(Byz)/pi,'-o','LineWidth',1.3)
     grid on
     ax = gca;
     ax.XLabel.String = 'Frequency (Hz)';

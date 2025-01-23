@@ -4,9 +4,9 @@ function PlotCoherence(f,CPxy,CPyx,file)
     %
 
     % figure('Name','Coherence curve','Position',[244.2,235.4,719.2,420])
-    semilogx(f,CPxy,'LineWidth',1.3)
+    semilogx(f,abs(CPxy),'-o','LineWidth',1.3)
     hold on
-    semilogx(f,CPyx,'LineWidth',1.3)
+    semilogx(f,abs(CPyx),'-o','LineWidth',1.3)
     grid on
     ax = gca;
     ax.XLabel.String = 'Frequency (Hz)';

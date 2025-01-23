@@ -44,7 +44,7 @@ end
 %% 
 
 figure('Position',[361,72.2,676.8,684.8]);
-hq = logspace(0,5,45);
+hq = logspace(0,3.5,45);
 dq = 11:23;
 [dq,hq] = meshgrid(dq,hq);
 Rxyq = griddata(d,hxy,Rxy,dq,hq,'v4');
@@ -56,7 +56,7 @@ Rxyq = log10(abs(Rxyq));
 Ryxq = log10(abs(Ryxq));
 
 cmap = load('Color\viridis.txt');
-[dq,hq] = meshgrid(11:23,logspace(0,5,40));
+[dq,hq] = meshgrid(11:23,logspace(0,3.5,40));
 contourf(dq,hq,Ryxq)
 ax = gca;
 ax.YScale = 'log';
@@ -65,9 +65,9 @@ ax.FontName = 'Times New Roman';
 ax.FontSize = 14;
 ax.YDir = 'reverse';
 ax.XLabel.String = 'Observation point';
-ax.XLim = [11,23]
+ax.XLim = [11,23];
 ax.Title.String = 'Bostick inversion of 1D magnetotelluric \rho_{xy}';
 
-colormap(cmap)
+colormap('jet')
 colorbar
 

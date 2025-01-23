@@ -4,9 +4,9 @@ function PlotResistivity(f,rxy,ryx,file)
 %
 
     % figure('Name','Apparent resistivity curve','Position',[244.2,235.4,719.2,420])
-    loglog(f,rxy,'LineWidth',1.3)
+    loglog(f,rxy,'-o','LineWidth',1.3)
     hold on
-    loglog(f,ryx,'LineWidth',1.3)
+    loglog(f,ryx,'-o','LineWidth',1.3)
     grid on
     ax = gca;
     ax.XLabel.String = 'Frequency (Hz)';

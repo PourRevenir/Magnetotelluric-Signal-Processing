@@ -4,9 +4,9 @@ function PlotPhase(f,phxy,phyx,file)
 %
 
     % figure('Name','Phase curve','Position',[244.2,235.4,719.2,420])
-    semilogx(f,phxy,'LineWidth',1.3)
+    semilogx(f,phxy,'-o','LineWidth',1.3)
     hold on
-    semilogx(f,phyx,'LineWidth',1.3)
+    semilogx(f,phyx,'-o','LineWidth',1.3)
     grid on
     ax = gca;
     ax.XLabel.String = 'Frequency (Hz)';
